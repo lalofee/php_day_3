@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<link rel="stylesheet" type="text/css" href="style3.css">
+<style>
+body {
+	background-color: pink;
+}
+h1 {
+	text-align: center;
+	color: rgb(51, 0, 0);
+}
+</style>
        <title>authors list</title>
 </head>
 
