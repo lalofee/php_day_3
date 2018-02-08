@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <title>classes</title>
+		<link rel="stylesheet" type="text/css" href="style3.css">
+       <title>authors list</title>
 </head>
 
 <body>
-        <h1></h1>
+        <h1>Diese Autoren werden von unserem Verlag publiziert</h1>
+
 
 <?php
 class Author {
@@ -13,15 +15,19 @@ class Author {
 	var $author_date_of_birth;
 	var $author_language;
 
+	function __construct($setauthor_name, $setauthor_date_of_birth, $setauthor_language) {
+		$this->author_name = $setauthor_name;
+		$this->author_date_of_birth = $setauthor_date_of_birth;
+		$this->author_language = $setauthor_language;
+
+	}
+
 	function printMe() {
-		echo $this->author_name . " " . $this->author_date_of_birth . " " . $this->author_language;
+		echo "Name: " . $this->author_name . " Geburtstag: " . $this->author_date_of_birth . " Sprache: " . $this->author_language;
 	}
 }
 
-$Daniel_Kehlmann = new Author;
-$Daniel_Kehlmann->author_name = "Daniel Kehlmann";
-$Daniel_Kehlmann->author_date_of_birth = "1985-02-12";
-$Daniel_Kehlmann->author_language = "Deutsch";
+$Daniel_Kehlmann = new Author("Daniel Kehlmann", "1985-02-12", "Deutsch");
 $Daniel_Kehlmann->printMe();
 
 
